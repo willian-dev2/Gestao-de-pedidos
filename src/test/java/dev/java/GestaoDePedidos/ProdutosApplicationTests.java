@@ -1,4 +1,4 @@
-package dev.java.Produtos;
+package dev.java.GestaoDePedidos;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

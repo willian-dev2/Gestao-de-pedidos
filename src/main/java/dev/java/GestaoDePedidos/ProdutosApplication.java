@@ -1,4 +1,4 @@
-package dev.java.Produtos;
+package dev.java.GestaoDePedidos;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
