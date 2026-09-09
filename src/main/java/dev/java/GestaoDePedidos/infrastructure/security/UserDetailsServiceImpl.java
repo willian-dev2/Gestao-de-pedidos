@@ -1,7 +1,5 @@
 package dev.java.GestaoDePedidos.infrastructure.security;
 
-
-
 import dev.java.GestaoDePedidos.business.DTO.UsuarioDTO;
 import dev.java.GestaoDePedidos.infrastructure.Client.UsuarioClient;
 import org.springframework.beans.factory.annotation.Autowired;
