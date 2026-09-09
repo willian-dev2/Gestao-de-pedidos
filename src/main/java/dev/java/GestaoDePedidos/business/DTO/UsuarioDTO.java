@@ -2,8 +2,6 @@ package dev.java.GestaoDePedidos.business.DTO;
 
 import lombok.*;
 
-import java.time.LocalDateTime;
-
 @Getter
 @Setter
 @AllArgsConstructor
