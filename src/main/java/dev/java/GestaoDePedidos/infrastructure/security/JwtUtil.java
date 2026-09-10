@@ -30,6 +30,12 @@ public class JwtUtil {
         return extractClaims(token).getSubject();
     }
 
+    // extrai o role de usuário do token JWT
+    public String extractRole(String token) {
+        // Obtém o assunto (Role do usuário) das claims do token
+        return extractClaims(token).get("role", String.class);
+    }
+
     // Verifica se o token JWT está expirado
     public boolean isTokenExpired(String token) {
         // Compara a data de expiração do token com a data atual
