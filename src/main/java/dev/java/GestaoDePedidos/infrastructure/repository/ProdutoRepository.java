@@ -2,7 +2,6 @@ package dev.java.GestaoDePedidos.infrastructure.repository;
 
 import dev.java.GestaoDePedidos.infrastructure.entity.ProdutoEntity;
 import dev.java.GestaoDePedidos.infrastructure.enums.Categoria;
-import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
