@@ -1,5 +1,6 @@
 package dev.java.GestaoDePedidos.infrastructure.entity;
 
+import dev.java.GestaoDePedidos.infrastructure.enums.Categoria;
 import dev.java.GestaoDePedidos.infrastructure.enums.Status;
 import jakarta.persistence.*;
 import lombok.*;
@@ -31,6 +32,10 @@ public class ProdutoEntity {
     @CreationTimestamp
     private LocalDate dataCriacao;
     @Column(name = "Status")
+    @Enumerated(EnumType.STRING) // persiste como uma String no banco de dados
     private Status status;
+    @Column(name = "categoria")
+    @Enumerated(EnumType.STRING)
+    private Categoria categoria;
 
 }
