@@ -12,6 +12,7 @@ public class CompraConverter {
         return new CompraDTO(
                 entity.getId(),
                 entity.getProduto().getId(),
+                entity.getValor(),
                 entity.getProduto().getNomeProduto(),
                 entity.getEmailComprador(),
                 entity.getDataCompra()
@@ -22,6 +23,7 @@ public class CompraConverter {
         return CompraEntity.builder()
                 .produto(produto)
                 .emailComprador(email)
+                .valor(produto.getPreco())
                 .build();
         // não precisa passar o dataCompra porque ele é gerado automaticamente
     }

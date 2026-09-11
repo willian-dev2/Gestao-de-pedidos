@@ -6,6 +6,7 @@ public record CompraDTO(
 
         Long id,
         Long produtoId,
+        Double valor,
         String nomeProduto,
         String emailComprador,
         LocalDateTime dataCompra

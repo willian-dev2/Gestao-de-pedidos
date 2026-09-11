@@ -26,6 +26,9 @@ public class CompraEntity {
     @Column(name = "Email_Comprador", length = 100)
     private String emailComprador;
 
+    @Column(name = "Valor_Compra", length = 100)
+    private double valor;
+
     @CreationTimestamp
     @Column(name = "Data_Compra", length = 100)
     private LocalDateTime dataCompra;
