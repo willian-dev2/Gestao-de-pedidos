@@ -4,6 +4,7 @@ import dev.java.GestaoDePedidos.business.DTO.ProdutoDTO;
 import dev.java.GestaoDePedidos.business.DTO.ProdutoResumoDTO;
 import dev.java.GestaoDePedidos.business.Service.ProdutoService;
 import dev.java.GestaoDePedidos.infrastructure.enums.Categoria;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +20,7 @@ public class ProdutoController {
 
     @PostMapping("/registro")
     public ResponseEntity<ProdutoDTO> gravarProduto(@RequestBody ProdutoDTO dto,
-                                                    @RequestHeader("Authorization") String token) {
+                                                    @Valid @RequestHeader("Authorization") String token) {
         return ResponseEntity.ok(produtoService.salvarProduto(token ,dto));
     }
 
@@ -35,7 +36,7 @@ public class ProdutoController {
         return ResponseEntity.ok(produtoService.buscarPorID(id));
     }
 
-    @DeleteMapping("delete/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> deletarProdutoPorId(@PathVariable Long id,
                                                     @RequestHeader("Authorization") String token) {
         produtoService.deletarProdutoPorId(id, token);
