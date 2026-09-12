@@ -22,8 +22,8 @@ public class CompraController {
 
 
     @GetMapping("/{id}")
-    public ResponseEntity<CompraDTO> buscarPorId(@PathVariable Long id,
-                                                 @RequestHeader("Authorization") String token) {
+    public ResponseEntity<CompraDTO> buscarComprasPorId(@PathVariable Long id,
+                                                        @RequestHeader("Authorization") String token) {
         return ResponseEntity.ok(compraService.buscarPorId(id, token));
     }
 
